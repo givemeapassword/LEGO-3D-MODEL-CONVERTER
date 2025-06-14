@@ -1,0 +1,450 @@
+/* Главное окно */
+MainWindow {
+    background-color: #f3f3f3;
+}
+
+/* Заголовок */
+#header {
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* Контейнер прогресса */
+#progressContainer {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Кнопки в заголовке */
+#minimizeButton, #closeButton {
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: transparent;  /* Прозрачный фон по умолчанию */
+    border: none;
+    color: #333333;                /* Тёмно-серый текст */
+}
+
+#minimizeButton:hover {
+    background-color: #e0e0e0;     /* Светло-серый при наведении */
+}
+
+#closeButton:hover {
+    background-color: #ff6666;     /* Светло-красный при наведении */
+    color: #ffffff;                /* Белый текст при наведении */
+}
+
+/* Окно модели */
+#modelContainer {
+    background-color: #b2b2b2;
+    border-radius: 20px;
+}
+#modelWindow {
+    background-color: #C0C0C0;
+}
+/* Стиль для ViewCube */
+ViewCube {
+    background: transparent !important;  /* Полностью прозрачный фон */
+    border: none !important;  /* Убираем границы */
+}
+
+/* Панель настроек */
+#settingsPanel, #settingsTab, #cubsTab {
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#settingsPanel::pane {
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+}
+#settingsPanel QWidget {
+    background-color: #ffffff;
+}
+QTabBar::tab {
+    font-family: 'Poppins';
+    background-color: #4c4c4c;
+    color: #ffffff;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 225px;
+    height: 48px;
+    font-size: 16px;
+}
+QTabBar::tab:selected {
+    background-color: #f05d22;
+}
+
+/* Метки */
+QLabel {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* Выпадающий список */
+QComboBox {
+    font-family: 'Poppins';
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #f05d22;           /* Оранжевая обводка */
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+QComboBox:focus {
+    border: 1px solid #d94a1a;           /* Тёмно-оранжевый при фокусе */
+}
+QComboBox::drop-down {
+    width: 20px;
+    border: none;
+}
+QComboBox::down-arrow {
+    image: url(icons/down_arrow.svg);
+    width: 12px;
+    height: 12px;
+}
+QComboBox QAbstractItemView {
+    border: 1px solid #f05d22;           /* Оранжевая обводка для выпадающего списка */
+    background-color: #ffffff;
+    selection-background-color: #f05d22;
+    selection-color: #ffffff;
+}
+
+/* Кнопка заполнения */
+#fillHollowButton {
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: #e0e0e0 ;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+}
+#fillHollowButton:checked {
+    background-color: #f05d22;
+    color: #ffffff;
+}
+#fillHollowButton:hover {
+    background-color: #d94a1a;
+}
+
+/* Переключатель цветов (Material Design 3) */
+#useColors {
+    background-color: #e0e0e0;
+    border-radius: 17px;
+    padding: 2px;
+    border: none;
+}
+#useColors:checked {
+    background-color: #f05d22;
+}
+
+/* Поле ввода и кнопка пути */
+QLineEdit {
+    font-family: 'Poppins';
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+#outputPathButton {
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: #f05d22 !important;
+    color: #ffffff !important;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+#outputPathButton:hover {
+    background-color: #d94a1a !important;
+}
+
+/* Кнопка генерации */
+#generateButton {
+    font-family: 'Poppins';
+    background-color: #f05d22;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 20px;
+}
+#generateButton:hover {
+    background-color: #d94a1a;
+}
+#generateButton:disabled {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+/* Маленькие кнопки действий */
+#loadModelButton, #instructionButton, #stepsButton {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+#loadModelButton:hover, #instructionButton:hover, #stepsButton:hover {
+    background-color: #f0f0f0;
+}
+
+/* Прогресс и логи */
+#progressLogs::pane {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+#progressLogs QTabBar::tab {
+    font-family: 'Poppins';
+    background-color: #f05d22;
+    color: #ffffff;
+    padding: 5px;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+#progressLogs QTabBar::tab:selected {
+    background-color: #ffffff;
+    color: #f05d22;
+}
+QProgressBar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+}
+QProgressBar::chunk {
+    background-color: #f05d22;
+    border-radius: 5px;
+}
+
+#logDisplay {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #ffffff, stop:1 #f5f5f5);
+    border: 1px solid #f05d22;
+    border-radius: 15px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    padding: 5px;
+}
+#logDisplay::selection {
+    background-color: #f05d22;
+    color: #ffffff;
+}
+
+/* Список thumbnails */
+#thumbnailList {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+#thumbnailList::item:selected {
+    background-color: #f05d22;
+    color: #ffffff;
+}
+
+/* Скроллбары */
+QScrollBar:vertical {
+    background: #f0f0f0;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #f05d22;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollArea {
+    background-color: #ffffff;
+    border: none;
+}
+QScrollArea > QWidget {
+    background-color: #ffffff;
+}
+
+/* Snackbar */
+#snackbar {
+    background-color: #333333;
+    color: #ffcccc;
+    font-family: 'Poppins';
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Слайдер в твоём стиле */
+QSlider::groove:horizontal {
+    border: 1px solid #f05d22;
+    height: 8px;
+    background: #ffffff;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #f05d22;
+    border: 1px solid #ffffff;
+    width: 16px;
+    margin: -6px 0;
+    border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #ff7840;
+}
+
+QSlider::sub-page:horizontal {
+    background: #f05d22;
+    border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: #d9d9d9;
+    border-radius: 4px;
+}
+/* Переключатели для Render Steps и Generate Instructions */
+#renderSteps, #generateInstructions {
+    background-color: #e0e0e0;
+    border-radius: 17px;
+    padding: 2px;
+    border: none;
+}
+#renderSteps:checked, #generateInstructions:checked {
+    background-color: #f05d22;
+}
+/* Переключатели в стиле Material Design 3 */
+/* Переключатели в стиле тумблера (QCheckBox и QPushButton как переключатели) */
+#curvatureBased, #minimalSupport, #parallelProcessing, #exportVoxelized, #exportUniqueBricks, 
+#useColors, #renderSteps, #generateInstructions, #allowTopLayer {
+    background-color: #e0e0e0;           /* Серый фон в выключенном состоянии */
+    border-radius: 17px;                 /* Закругление для тумблера */
+    border: 1px solid #d9d9d9;           /* Тонкая рамка для контраста */
+    width: 50px;                         /* Фиксированная ширина тумблера */
+    min-height: 34px;                    /* Высота тумблера */
+    padding: 2px;                        /* Отступ внутри */
+    font-family: 'Poppins';              /* Шрифт Poppins */
+    font-size: 15px;                     /* Размер шрифта */
+    font-weight: 500;                    /* Толщина шрифта */
+}
+
+/* Скрываем стандартный индикатор QCheckBox */
+#curvatureBased::indicator, #minimalSupport::indicator, #parallelProcessing::indicator, 
+#exportVoxelized::indicator, #exportUniqueBricks::indicator, #allowTopLayer::indicator {
+    width: 0px;                          /* Скрываем индикатор */
+    height: 0px;
+}
+
+/* Состояние "выключено" */
+#curvatureBased:unchecked, #minimalSupport:unchecked, #parallelProcessing:unchecked, 
+#exportVoxelized:unchecked, #exportUniqueBricks:unchecked, 
+#useColors:unchecked, #renderSteps:unchecked, #generateInstructions:unchecked, 
+#allowTopLayer:unchecked {
+    background-color: #e0e0e0;
+    color: #000000;                      /* Чёрный текст в выключенном состоянии */
+}
+
+/* Состояние "включено" */
+#curvatureBased:checked, #minimalSupport:checked, #parallelProcessing:checked, 
+#exportVoxelized:checked, #exportUniqueBricks:checked, 
+#useColors:checked, #renderSteps:checked, #generateInstructions:checked, 
+#allowTopLayer:checked {
+    background-color: #f05d22;           /* Оранжевый фон в включённом состоянии */
+    color: #ffffff;                      /* Белый текст в включённом состоянии */
+}
+
+/* Кнопка "Browse" */
+/* Кнопка "Browse" */
+/* Кнопка "Browse" */
+#settingsPanel #outputPathButton {  /* Увеличиваем специфичность */
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: #f05d22;     /* Явный базовый цвет */
+    color: #ffffff;                /* Белый текст */
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;                  /* Убираем границы */
+}
+#settingsPanel #outputPathButton:hover {
+    background-color: #d94a1a;     /* Тёмно-оранжевый при наведении */
+}
+#settingsPanel #outputPathButton::icon {
+    color: #ffffff;  /* Белая иконка */
+}
+
+/* Список "Allowed Brick Sizes" */
+#brick_sizes {
+    background-color: #ffffff;
+    border: 1px solid #f05d22;           /* Оранжевая обводка */
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+#brick_sizes::item:selected {
+    background-color: #f05d22;
+    color: #ffffff;
+}
+
+/* Оверлей для кнопок */
+/* Оверлей для кнопок */
+#modelContainer #buttonsOverlay {
+    background-color: #4C4C4C !important;
+    border-radius: 12px !important;
+}
+
+/* Кнопки переключения вида в окне модели */
+#modelContainer #viewModelButton, #modelContainer #viewVoxelButton {
+    background-color: #4C4C4C !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 4px !important;
+    min-width: 80px !important;  /* Минимальная ширина кнопки */
+    min-height: 72px !important; /* Минимальная высота кнопки (80px - 4px padding сверху и снизу) */
+    max-width: 80px !important;  /* Максимальная ширина кнопки */
+    max-height: 72px !important; /* Максимальная высота кнопки */
+}
+
+#modelContainer #viewModelButton:hover, #modelContainer #viewVoxelButton:hover {
+    background-color: #f05d22 !important;
+}
+
+#modelContainer #viewModelButton:pressed, #modelContainer #viewVoxelButton:pressed {
+    background-color: #d94a1a !important;
+}
+
+#modelContainer #viewModelButton:checked, #modelContainer #viewVoxelButton:checked {
+    background-color: #f05d22 !important;
+}
+
+/* Иконки внутри кнопок */
+#modelContainer #viewModelButton {
+    qproperty-icon: url(icons/model_view.svg);
+    qproperty-iconSize: 50px;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+#modelContainer #viewVoxelButton {
+    qproperty-icon: url(icons/voxel_view.svg);
+    qproperty-iconSize: 50px;
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
