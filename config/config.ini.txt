@@ -1,0 +1,5 @@
+[Network]
+vlan_id = default
+nas_ip = default
+folder_path = /shared/models
+protocol = smb
